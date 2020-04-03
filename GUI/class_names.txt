@@ -1,0 +1,19 @@
+class for text of thrusters : tt1,tt2,tt3......
+class for thruster meter : meter1,meter2,........
+			   meter11,meter22,.....
+			   meter12,meter21,......
+
+pressure meter : pvalue
+pressure value : pmeter
+temperature meter :tvalue
+tempetrature value: tmeter
+
+battery status : batt01_status
+		batt01_percentage
+		 batt02_status
+		batt02_percentage
+
+devices status: device01,device02,....
+lan icon : lan
+kill icon :kbutton_back
+run script icon :rscript_back  
