@@ -27,10 +27,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          var battery01_percentage = '90%';
          var battery02_percentage = '40%';
          
-         var temperature_value = "50*C";
-         var temperature_meter = "5%";
-         var pressure_value = "30 bar";
-         var pressure_meter = "10%";
+         var humidity = 2.4;
+         var exttemp = 20;
+         var inttemp = 40;
+         var extpressure = 2;
+         var intpressure = 0.5;
+         
+         
          
          var device01_status = 1; 
          var device02_status = 1; 
@@ -38,6 +41,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          var device04_status = 1; 
          var device05_status = 0; 
          var device06_status = 1;
+         var device07_status = 0; 
+         var device08_status = 1;
+         
          
          // devices status
          if (device01_status){sym.$(".device01").css({"background-color":"rgba(0,116,107,1.00)"});}
@@ -46,6 +52,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          if (device04_status){sym.$(".device04").css({"background-color":"rgba(0,116,107,1.00)"});}
          if (device05_status){sym.$(".device05").css({"background-color":"rgba(0,116,107,1.00)"});}
          if (device06_status){sym.$(".device06").css({"background-color":"rgba(0,116,107,1.00)"});}
+         if (device07_status){sym.$(".device07").css({"background-color":"rgba(0,116,107,1.00)"});}
+         if (device08_status){sym.$(".device08").css({"background-color":"rgba(0,116,107,1.00)"});}
          
          
          // battery meter
@@ -57,10 +65,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          
          //temperature and pressure meter
-         sym.$(".tvalue").html(temperature_value);
-         sym.$(".tmeter").css({ height:temperature_meter});
-         sym.$(".pvalue").html(pressure_value);
-         sym.$(".pmeter").css({height:pressure_meter});
+         sym.$(".exttemp_value").html(exttemp + "*C");
+         sym.$(".exttemp_status").css({ 'width':exttemp + "%"});
+         sym.$(".inttemp_value").html(inttemp + "*C");
+         sym.$(".inttemp_status").css({ 'width':inttemp + "%"});
+         sym.$(".extpressure_value").html(extpressure + " bar");
+         sym.$(".extpressure_status").css({ 'width': extpressure*10 + "%"});
+         sym.$(".intpressure_value").html(intpressure + " bar");
+         sym.$(".intpressure_status").css({ 'width':intpressure*10 + "%"});
+         sym.$(".humidity_value").html(humidity);
+         sym.$(".humidity_status").css({ 'width':humidity*10 + "%"});
          
          
          
@@ -92,7 +106,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.$(".tt7").html(thrust07);
          sym.$(".tt8").html(thrust08);
          
-         
+         //setting thruster meters
          sym.$(".meter1").css({'transform':rotation1});
          if (angle1 >= 90){
          sym.$(".meter1").css({'transform':'rotate(90deg)'});
@@ -450,5 +464,111 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("device06");
    //Edge symbol end:'device06'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'device001'
+   (function(symbolName) {   
+   
+   })("device07");
+   //Edge symbol end:'device07'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'device001'
+   (function(symbolName) {   
+   
+   })("device08");
+   //Edge symbol end:'device08'
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("Ext_pressure");
+   //Edge symbol end:'Ext_pressure'
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("Int_Pressure");
+   //Edge symbol end:'Int_Pressure'
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("Ext_Temp");
+   //Edge symbol end:'Ext_Temp'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("ext_temp");
+   //Edge symbol end:'ext_temp'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("int_temp");
+   //Edge symbol end:'int_temp'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("humidity");
+   //Edge symbol end:'humidity'
 
 })(jQuery, AdobeEdge, "EDGE-6000272");
