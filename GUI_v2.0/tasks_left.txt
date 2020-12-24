@@ -1,0 +1,14 @@
+UI:
+IMU readings_Display
+DVL_velocity
+baad mei - log data button
+
+
+Code:
+camera - ros-iframe linkage left
+fetching battery%age, device status, sensordata, landevices
+fetching thruster data
+fetching start-time
+terminal integration 
+
+Controller page :

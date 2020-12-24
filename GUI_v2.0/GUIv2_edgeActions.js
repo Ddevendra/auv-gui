@@ -15,6 +15,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          
+         sym.$(".script_box").css({"display": "none"});
+         sym.$(".lan_box").css({"display": "none"});
+         
          var thrust01 = "100";
          var thrust02 = "400";
          var thrust03 = "50";
@@ -259,6 +262,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          
 
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_run_script}", "click", function(sym, e) {
+         var script_box = sym.getSymbol("script_box");
+         if(script_box.toggle==1){sym.$(".script_box").css({"display": "none"}); script_box.toggle = 0;}
+         else {sym.$(".script_box").css({"display": "block"}); script_box.toggle = 1;}
+
+      });
+      //Edge binding end
+
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
+         // insert code to be run when the symbol is created here
+         var toggle =0;
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+         // insert code to be run when the composition is fully loaded here
+         var toggle =0;
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_lan}", "click", function(sym, e) {
+         // insert code for mouse click here
+         var lan_box = sym.getSymbol("lan_box");
+         if(lan_box.toggle==1){sym.$(".lan_box").css({"display": "none"}); lan_box.toggle = 0;}
+         else {sym.$(".lan_box").css({"display": "block"}); lan_box.toggle = 1;}
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 839, function(sym, e) {
+         // insert code here
       });
       //Edge binding end
 
@@ -570,5 +609,135 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("humidity");
    //Edge symbol end:'humidity'
+
+   //=========================================================
+   
+   //Edge symbol: 'run_script'
+   (function(symbolName) {   
+   
+   })("run_script");
+   //Edge symbol end:'run_script'
+
+   //=========================================================
+   
+   //Edge symbol: 'script_box'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         // insert code here
+         var toggle=0;
+
+      });
+      //Edge binding end
+
+   })("script_box");
+   //Edge symbol end:'script_box'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'script_box'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         // insert code here
+         var toggle=0;
+
+      });
+      //Edge binding end
+
+   })("lan_box");
+   //Edge symbol end:'lan_box'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("velocity-x");
+   //Edge symbol end:'velocity-x'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("velocity-y");
+   //Edge symbol end:'velocity-y'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("velocity-z");
+   //Edge symbol end:'velocity-z'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("yaw");
+   //Edge symbol end:'yaw'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("pitch");
+   //Edge symbol end:'pitch'
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Ext_pressure'
+   (function(symbolName) {   
+   
+   })("roll");
+   //Edge symbol end:'roll'
 
 })(jQuery, AdobeEdge, "EDGE-6000272");
